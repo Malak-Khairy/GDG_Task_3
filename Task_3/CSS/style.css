@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(../Imges/war-conflict-landscape-with-soldiers-fighting.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+.parent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+}
+.child{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    overflow: hidden;
+}
+.child img{
+    width: 500px;
+    height: 350px;
+    transition: transform .2s ease-in-out;
+}
+.child:hover img {
+    transform: scale(1.25);
+}
+.layer{
+    position: absolute;
+    top:0;
+    left:0;
+    transition: all .2s ease-in-out;
+}
+.layer button{
+    background-color: violet;
+    color: white;
+    border-radius: 20px;
+    width: 100px;
+    height: 30px;
+    border: none;
+    margin: 30px 0 70px;
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: all .5s ease-in-out;
+    transition-delay: .4s;
+}
+.child:hover button{
+    opacity: 1;
+    transform: translateY(0);
+}
+.content1{
+    overflow: hidden;
+    opacity: 0;
+    transition: all .5s ease-in-out;
+    transition-delay: .4s;
+    transform: translatex(70px);
+}
+.child:hover .content1{
+    opacity: 1;
+    transform: translatex(0);
+}
+.content2{
+    overflow: hidden;
+    opacity: 0;
+    transition: all .5s ease-in-out;
+    transition-delay: .4s;
+    transform: translateY(50px); 
+}
+.child:hover .content2{
+    opacity: 1;
+    transform: translateY(0);
+}
+.content h2{
+    color: white;
+    background-color: violet;
+    font-size: 23px;
+}
+.content p{
+    color: white;
+    background-color: rgb(99, 97, 97,.9);
+    padding: 20px 5px;
+    width: 500px;
+    height: 197px;
+    font-size: 12px;
+}
